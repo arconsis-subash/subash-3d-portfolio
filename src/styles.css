@@ -200,6 +200,7 @@ canvas {
   border-radius: 8px;
   border: 1px solid #3498db;
   text-align: center;
+  list-style: none
 }
 
 .languages {
