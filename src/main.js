@@ -1,79 +1,98 @@
 import * as THREE from 'three';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
-
+// Canvas and Scene Setup
 const canvas = document.getElementById('canvas');
 const width = window.innerWidth;
 const height = window.innerHeight;
 
-// Scene setup
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
 renderer.setSize(width, height);
-renderer.setClearColor(0x000000, 0.1);
-camera.position.z = 5;
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setClearColor(0x000000, 1); // Black background
 
-// Create rotating geometry
-const geometry = new THREE.IcosahedronGeometry(2, 4);
-const material = new THREE.MeshPhongMaterial({ 
-  color: 0x3498db,
-  emissive: 0x1a5276,
-  wireframe: false
+// Center the camera
+camera.position.set(0, 0, 10);
+camera.lookAt(0, 0, 0);
+
+// Create a dynamic 3D ball (silver/greyish with repulse effect)
+const ballGeometry = new THREE.SphereGeometry(1.5, 64, 64);
+const ballMaterial = new THREE.MeshStandardMaterial({
+  color: 0xc0c0c0, // Silver
+  metalness: 0.9,
+  roughness: 0.3,
+  emissive: 0x333333, // Subtle glow
 });
-const mesh = new THREE.Mesh(geometry, material);
-scene.add(mesh);
+const ball = new THREE.Mesh(ballGeometry, ballMaterial);
+scene.add(ball);
 
-// Lighting
-const light1 = new THREE.PointLight(0xffffff, 1);
-light1.position.set(5, 5, 5);
-scene.add(light1);
-
-const light2 = new THREE.PointLight(0xff0000, 0.5);
-light2.position.set(-5, -5, 5);
-scene.add(light2);
+// Add repulse animation to the ball
+gsap.to(ball.scale, {
+  x: 1.2,
+  y: 1.2,
+  z: 1.2,
+  duration: 1.5,
+  repeat: -1,
+  yoyo: true,
+  ease: 'power1.inOut',
+});
 
 // Add moving lines
-const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
-const lineGeometry = new THREE.BufferGeometry();
-const points = [];
-for (let i = 0; i < 10; i++) {
-  points.push(new THREE.Vector3(Math.random() * 10 - 5, Math.random() * 10 - 5, Math.random() * 10 - 5));
+const lineMaterial = new THREE.LineBasicMaterial({ color: 0x555555 });
+const lineGroup = new THREE.Group();
+for (let i = 0; i < 50; i++) {
+  const points = [];
+  for (let j = 0; j < 10; j++) {
+    points.push(new THREE.Vector3(Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10));
+  }
+  const lineGeometry = new THREE.BufferGeometry().setFromPoints(points);
+  const line = new THREE.Line(lineGeometry, lineMaterial);
+  lineGroup.add(line);
 }
-lineGeometry.setFromPoints(points);
-const line = new THREE.Line(lineGeometry, lineMaterial);
-scene.add(line);
+scene.add(lineGroup);
 
-// Animate lines
-gsap.to(line.rotation, {
+// Animate the lines
+gsap.to(lineGroup.rotation, {
   x: Math.PI * 2,
   y: Math.PI * 2,
-  duration: 10,
+  duration: 20,
   repeat: -1,
-  ease: 'power1.inOut'
+  ease: 'linear',
 });
 
-// Animate lights
-gsap.to(light1.position, {
-  x: -5,
-  y: -5,
-  z: 5,
-  duration: 5,
-  repeat: -1,
-  yoyo: true,
-  ease: 'sine.inOut'
+// Add moving boxes
+const boxGroup = new THREE.Group();
+const boxMaterial = new THREE.MeshStandardMaterial({
+  color: 0x888888, // Greyish
+  metalness: 0.8,
+  roughness: 0.4,
 });
-gsap.to(light2.position, {
-  x: 5,
-  y: 5,
-  z: -5,
-  duration: 5,
+for (let i = 0; i < 30; i++) {
+  const boxGeometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
+  const box = new THREE.Mesh(boxGeometry, boxMaterial);
+  box.position.set(Math.random() * 20 - 10, Math.random() * 20 - 10, Math.random() * 20 - 10);
+  boxGroup.add(box);
+}
+scene.add(boxGroup);
+
+// Animate the boxes
+gsap.to(boxGroup.rotation, {
+  x: Math.PI * 2,
+  y: Math.PI * 2,
+  duration: 15,
   repeat: -1,
-  yoyo: true,
-  ease: 'sine.inOut'
+  ease: 'linear',
 });
+
+// Lighting
+const ambientLight = new THREE.AmbientLight(0x404040, 1.5); // Soft ambient light
+scene.add(ambientLight);
+
+const pointLight = new THREE.PointLight(0xffffff, 1.5);
+pointLight.position.set(5, 5, 5);
+scene.add(pointLight);
 
 // Interactive camera movement
 document.addEventListener('mousemove', (event) => {
@@ -82,15 +101,14 @@ document.addEventListener('mousemove', (event) => {
   gsap.to(camera.position, {
     x: mouseX * 2,
     y: mouseY * 2,
+    z: 10,
     duration: 0.5,
-    ease: 'power1.out'
+    ease: 'power1.out',
   });
 });
 
 // Animation loop
 function animate() {
-  mesh.rotation.x += 0.01;
-  mesh.rotation.y += 0.01;
   renderer.render(scene, camera);
   requestAnimationFrame(animate);
 }

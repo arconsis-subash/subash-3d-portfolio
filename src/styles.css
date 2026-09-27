@@ -4,25 +4,24 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Ensure the body and html allow scrolling */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* Enable vertical scrolling */
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-  background: #000;
-  overflow-x: hidden;
-}
-
+/* Canvas styling to ensure it doesn't block content */
 canvas {
   display: block;
-  position: fixed;
+  position: fixed; /* Keep it fixed in the background */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  z-index: 1;
+  height: 100%;
+  z-index: 0; /* Ensure it stays behind other content */
 }
 
 #nav {
@@ -65,15 +64,25 @@ canvas {
   justify-content: center;
   align-items: center;
   padding: 100px 20px;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(52, 152, 219, 0.1) 100%);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(1px);
+  color: #ffffff;
+
 }
+
+  h1
+  {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+  }
 
 .section h1,
 .section h2 {
   font-size: 3.5rem;
   margin-bottom: 20px;
   text-align: center;
+  color: #ffffff;
 }
 
 .section p {
@@ -81,12 +90,13 @@ canvas {
   max-width: 600px;
   text-align: center;
   line-height: 1.6;
+
+  color: #cccccc;
 }
 
 .subtitle {
   font-size: 1rem !important;
-  color: #3498db;
-  letter-spacing: 1px;
+  color: #aaaaaa;
 }
 
 .about-content {
