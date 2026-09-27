@@ -83,6 +83,43 @@ canvas {
   line-height: 1.6;
 }
 
+.subtitle {
+  font-size: 1rem !important;
+  color: #3498db;
+  letter-spacing: 1px;
+}
+
+.about-content {
+  max-width: 800px;
+  width: 100%;
+}
+
+.about-text {
+  text-align: center;
+  line-height: 1.8;
+}
+
+.education {
+  margin-top: 40px;
+  background: rgba(52, 152, 219, 0.15);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.education h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #3498db;
+}
+
+.education ul {
+  list-style: none;
+}
+
+.education li {
+  padding: 8px 0;
+}
+
 .hero {
   text-align: center;
 }
@@ -115,6 +152,22 @@ canvas {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #3498db;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .project-card:hover {
@@ -137,6 +190,18 @@ canvas {
   border-radius: 8px;
   border: 1px solid #3498db;
   text-align: center;
+}
+
+.languages {
+  margin-top: 60px;
+  padding-top: 60px;
+  border-top: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.languages h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #3498db;
 }
 
 .contact {
