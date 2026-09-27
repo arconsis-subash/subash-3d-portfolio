@@ -12,6 +12,6 @@
     "gsap": "^3.12"
   },
   "devDependencies": {
-    "vite": "^4.5"
+    "vite": "^8.3"
   }
 }
