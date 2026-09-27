@@ -4,24 +4,22 @@
   box-sizing: border-box;
 }
 
-/* Ensure the body and html allow scrolling */
 body, html {
   margin: 0;
   padding: 0;
-  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-y: auto;
   font-family: 'Arial', sans-serif;
   background: linear-gradient(135deg, #000000, #1a1a1a);
 }
 
-/* Canvas styling to ensure it doesn't block content */
 canvas {
   display: block;
-  position: fixed; /* Keep it fixed in the background */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Ensure it stays behind other content */
+  z-index: 0;
 }
 
 #nav {
@@ -100,13 +98,29 @@ canvas {
 }
 
 .about-content {
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-photo {
+  width: 240px;
+  height: 300px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .about-text {
+  flex: 1;
   text-align: center;
   line-height: 1.8;
+}
+
+.about-text p {
+  text-align: left;
 }
 
 .education {
@@ -189,18 +203,11 @@ canvas {
 .skills ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+  gap: 12px 20px;
   margin-top: 40px;
   max-width: 800px;
-}
-
-.skills li {
-  background: rgba(52, 152, 219, 0.2);
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #3498db;
+  list-style: none;
   text-align: center;
-  list-style: none
 }
 
 .languages {
@@ -231,5 +238,19 @@ canvas {
 
   .section {
     padding: 60px 20px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-photo {
+    width: 200px;
+    height: 250px;
+  }
+
+  .about-text p {
+    text-align: center;
   }
 }
