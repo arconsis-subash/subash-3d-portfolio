@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Portfolio</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <nav id="nav">
+    <ul>
+      <li><a href="#hero">Hero</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <div id="hero" class="section hero">
+    <h1>3D Portfolio</h1>
+    <p>Welcome to my interactive 3D space</p>
+  </div>
+
+  <div id="about" class="section about">
+    <h2>About</h2>
+    <p>Passionate developer creating immersive 3D experiences</p>
+  </div>
+
+  <div id="work" class="section work">
+    <h2>Work</h2>
+    <div class="projects">
+      <div class="project-card" data-image="0">Project 1</div>
+      <div class="project-card" data-image="1">Project 2</div>
+      <div class="project-card" data-image="2">Project 3</div>
+    </div>
+  </div>
+
+  <div id="skills" class="section skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Three.js</li>
+      <li>WebGL</li>
+      <li>JavaScript/TypeScript</li>
+      <li>3D Modeling</li>
+    </ul>
+  </div>
+
+  <div id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Get in touch - let's create something amazing!</p>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
