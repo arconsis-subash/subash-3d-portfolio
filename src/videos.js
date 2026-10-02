@@ -1,4 +1,4 @@
-import playlists from './content/videos.json';
+import fallbackPlaylists from './content/videos.json';
 
 const youtubeIcon = `
   <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -27,7 +27,9 @@ function createVideoCard(video) {
   return card;
 }
 
-export function renderVideos(container) {
+function renderPlaylists(container, playlists) {
+  container.replaceChildren();
+
   for (const playlist of playlists) {
     const group = document.createElement('div');
     group.className = 'playlist';
@@ -50,5 +52,20 @@ export function renderVideos(container) {
 
     group.append(header, row);
     container.append(group);
+  }
+}
+
+// Shows the bundled list right away, then swaps in the live playlists
+// from the Worker. Without the Worker (vite dev) the bundled list stays.
+export async function renderVideos(container) {
+  renderPlaylists(container, fallbackPlaylists);
+
+  try {
+    const response = await fetch('/api/videos');
+    if (response.ok) {
+      renderPlaylists(container, await response.json());
+    }
+  } catch {
+    // Keep the bundled list.
   }
 }
