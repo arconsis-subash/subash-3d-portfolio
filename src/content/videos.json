@@ -1,0 +1,173 @@
+[
+  {
+    "id": "PLievaKnl8uRSfgURGXy60ORAekpO6llyI",
+    "title": "Kubernetes 101",
+    "url": "https://www.youtube.com/playlist?list=PLievaKnl8uRSfgURGXy60ORAekpO6llyI",
+    "videos": [
+      {
+        "id": "bhVMSSWJL6s",
+        "title": "Kubernetes RBAC Explained Visually (Service Accounts, Roles & RoleBindings)",
+        "thumbnail": "https://i.ytimg.com/vi/bhVMSSWJL6s/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=bhVMSSWJL6s&list=PLievaKnl8uRSfgURGXy60ORAekpO6llyI"
+      },
+      {
+        "id": "MWeUQOfc-_Y",
+        "title": "The Kubernetes Helm Crash Course: Helm Install & Templates",
+        "thumbnail": "https://i.ytimg.com/vi/MWeUQOfc-_Y/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=MWeUQOfc-_Y&list=PLievaKnl8uRSfgURGXy60ORAekpO6llyI"
+      },
+      {
+        "id": "BZka0ySVMBo",
+        "title": "Kubernetes Services: ClusterIP vs NodePort vs LoadBalancer",
+        "thumbnail": "https://i.ytimg.com/vi/BZka0ySVMBo/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=BZka0ySVMBo&list=PLievaKnl8uRSfgURGXy60ORAekpO6llyI"
+      },
+      {
+        "id": "ar73ZQu5n3Q",
+        "title": "Kubernetes Deployment Explained | The real problem with pods",
+        "thumbnail": "https://i.ytimg.com/vi/ar73ZQu5n3Q/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=ar73ZQu5n3Q&list=PLievaKnl8uRSfgURGXy60ORAekpO6llyI"
+      },
+      {
+        "id": "DmEMJUti2uw",
+        "title": "Docker to Kubernetes Workflow: Code → Container → Artifactory → Pod → Live App",
+        "thumbnail": "https://i.ytimg.com/vi/DmEMJUti2uw/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=DmEMJUti2uw&list=PLievaKnl8uRSfgURGXy60ORAekpO6llyI"
+      },
+      {
+        "id": "DUvsYeaF3-Y",
+        "title": "Deployment vs StatefulSet | Why Most Developers Get This Wrong",
+        "thumbnail": "https://i.ytimg.com/vi/DUvsYeaF3-Y/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=DUvsYeaF3-Y&list=PLievaKnl8uRSfgURGXy60ORAekpO6llyI"
+      }
+    ]
+  },
+  {
+    "id": "PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O",
+    "title": "Tech under the Hood",
+    "url": "https://www.youtube.com/playlist?list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O",
+    "videos": [
+      {
+        "id": "qFmKvn40ud0",
+        "title": "Companies Bought GPUs Out of FOMO… Now what?",
+        "thumbnail": "https://i.ytimg.com/vi/qFmKvn40ud0/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=qFmKvn40ud0&list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O"
+      },
+      {
+        "id": "VYUYirln-rI",
+        "title": "Don’t use floating tags in GitHub actions!!",
+        "thumbnail": "https://i.ytimg.com/vi/VYUYirln-rI/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=VYUYirln-rI&list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O"
+      },
+      {
+        "id": "jycFQwOa1Os",
+        "title": "Your CI/CD pipeline is leaking credentials",
+        "thumbnail": "https://i.ytimg.com/vi/jycFQwOa1Os/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=jycFQwOa1Os&list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O"
+      },
+      {
+        "id": "7creuVUAHM0",
+        "title": "Is Kubernetes becoming the OS for AI?",
+        "thumbnail": "https://i.ytimg.com/vi/7creuVUAHM0/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=7creuVUAHM0&list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O"
+      },
+      {
+        "id": "VLmbcCxnkvk",
+        "title": "Single Agent Pattern vs MultiAgent: The Real Difference",
+        "thumbnail": "https://i.ytimg.com/vi/VLmbcCxnkvk/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=VLmbcCxnkvk&list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O"
+      },
+      {
+        "id": "IsVLAoXWccQ",
+        "title": "RAG vs MCP: Which One Solves Real Problems?",
+        "thumbnail": "https://i.ytimg.com/vi/IsVLAoXWccQ/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=IsVLAoXWccQ&list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O"
+      },
+      {
+        "id": "UatBvkA1s5U",
+        "title": "Why Traditional AppSec Tools Fail Against AI Coding Agents",
+        "thumbnail": "https://i.ytimg.com/vi/UatBvkA1s5U/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=UatBvkA1s5U&list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O"
+      },
+      {
+        "id": "v0Il_q6KfAQ",
+        "title": "GitHub Actions: Automation vs Overautomation",
+        "thumbnail": "https://i.ytimg.com/vi/v0Il_q6KfAQ/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=v0Il_q6KfAQ&list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O"
+      },
+      {
+        "id": "m2yK4hJzd4s",
+        "title": "Why is Kubernetes still hard even after 10 years?",
+        "thumbnail": "https://i.ytimg.com/vi/m2yK4hJzd4s/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=m2yK4hJzd4s&list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O"
+      },
+      {
+        "id": "uFSxBzBtJOc",
+        "title": "Monitoring vs Observability: Why Your Dashboards Are Wrong",
+        "thumbnail": "https://i.ytimg.com/vi/uFSxBzBtJOc/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=uFSxBzBtJOc&list=PLievaKnl8uRSw3f8XlAJtJ6oYWLvQsc1O"
+      }
+    ]
+  },
+  {
+    "id": "PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX",
+    "title": "Subash Thinks",
+    "url": "https://www.youtube.com/playlist?list=PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX",
+    "videos": [
+      {
+        "id": "o8i02ejrw94",
+        "title": "Recursive Self-Improvement: When AI Starts Improving Itself",
+        "thumbnail": "https://i.ytimg.com/vi/o8i02ejrw94/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=o8i02ejrw94&list=PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX"
+      },
+      {
+        "id": "1W_HqnpO10s",
+        "title": "Apple vision Pro: Not Over Yet",
+        "thumbnail": "https://i.ytimg.com/vi/1W_HqnpO10s/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=1W_HqnpO10s&list=PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX"
+      },
+      {
+        "id": "TZ9Un_Yb8II",
+        "title": "Agentic engineering is just hype",
+        "thumbnail": "https://i.ytimg.com/vi/TZ9Un_Yb8II/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=TZ9Un_Yb8II&list=PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX"
+      },
+      {
+        "id": "Z6GqvPfBm28",
+        "title": "Why AI Companies Keep Buying Useless GPUs",
+        "thumbnail": "https://i.ytimg.com/vi/Z6GqvPfBm28/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=Z6GqvPfBm28&list=PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX"
+      },
+      {
+        "id": "es1p2hFGRZQ",
+        "title": "GitHub Actions Security Mistake Leaking Millions of Secrets",
+        "thumbnail": "https://i.ytimg.com/vi/es1p2hFGRZQ/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=es1p2hFGRZQ&list=PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX"
+      },
+      {
+        "id": "U0H3LP0TQcU",
+        "title": "Do this now to reduce your Kubernetes cost",
+        "thumbnail": "https://i.ytimg.com/vi/U0H3LP0TQcU/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=U0H3LP0TQcU&list=PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX"
+      },
+      {
+        "id": "TJPqcaDs8_8",
+        "title": "AI killed Stack Overflow and open source!!",
+        "thumbnail": "https://i.ytimg.com/vi/TJPqcaDs8_8/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=TJPqcaDs8_8&list=PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX"
+      },
+      {
+        "id": "tCG25ZzfG8g",
+        "title": "Coding assistants have security risks",
+        "thumbnail": "https://i.ytimg.com/vi/tCG25ZzfG8g/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=tCG25ZzfG8g&list=PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX"
+      },
+      {
+        "id": "7pgys-KgPGc",
+        "title": "Spec-Driven Development | Now or Never",
+        "thumbnail": "https://i.ytimg.com/vi/7pgys-KgPGc/mqdefault.jpg",
+        "url": "https://www.youtube.com/watch?v=7pgys-KgPGc&list=PLievaKnl8uRRqS8aLP29bcod8ck1qNIyX"
+      }
+    ]
+  }
+]

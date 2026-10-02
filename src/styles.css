@@ -205,6 +205,7 @@ canvas {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   margin-top: 40px;
+  width: 100%;
   max-width: 800px;
   list-style: none;
 }
@@ -234,8 +235,24 @@ canvas {
 }
 
 @media (max-width: 768px) {
+  #nav {
+    left: 0;
+    width: 100%;
+    transform: none;
+    padding: 10px 16px;
+    border-radius: 0 0 14px 14px;
+  }
+
   #nav ul {
-    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+  }
+
+  #nav a {
+    font-size: 11px;
+    letter-spacing: 1px;
+    white-space: nowrap;
   }
 
   .section h1,
@@ -259,5 +276,120 @@ canvas {
 
   .about-text p {
     text-align: center;
+  }
+}
+
+.videos {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(52, 152, 219, 0.15) 100%);
+}
+
+.playlists {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.playlist-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.playlist-header svg {
+  width: 20px;
+  height: 20px;
+  color: #ff0033;
+}
+
+.playlist-header h3 {
+  font-size: 1.05rem;
+  color: #3498db;
+}
+
+.playlist-header span {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.playlist-header:hover h3 {
+  text-decoration: underline;
+}
+
+.video-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 4px 2px 8px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(52, 152, 219, 0.5) transparent;
+}
+
+.video-card {
+  flex: 0 0 150px;
+  scroll-snap-align: start;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(52, 152, 219, 0.12);
+  border: 1px solid rgba(52, 152, 219, 0.4);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.video-card:hover {
+  transform: translateY(-3px);
+  background: rgba(52, 152, 219, 0.3);
+}
+
+.video-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #111;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 7v10l8-5z'/%3E%3C/svg%3E") center / 16px no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video-card:hover .video-thumb::after {
+  opacity: 1;
+}
+
+.video-card h4 {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  margin: 6px 8px 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .video-card {
+    flex-basis: 130px;
   }
 }

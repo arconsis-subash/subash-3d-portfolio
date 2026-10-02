@@ -14,5 +14,11 @@ export function setupScene(canvas, width, height) {
   camera.position.set(0, 0, 10);
   camera.lookAt(0, 0, 0);
 
+  window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+  });
+
   return { scene, camera, renderer };
 }

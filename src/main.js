@@ -5,6 +5,9 @@ import { addLighting } from './scene/lighting.js';
 import { createLines } from './scene/lines.js';
 import { setupScene } from './scene/setupScene.js';
 import { startRenderLoop } from './scene/startRenderLoop.js';
+import { renderVideos } from './videos.js';
+
+renderVideos(document.getElementById('videos-list'));
 
 const canvas = document.getElementById('canvas');
 const width = window.innerWidth;
@@ -16,5 +19,5 @@ createBall(scene);
 createLines(scene);
 createBoxes(scene);
 addLighting(scene);
-addCameraControls(camera, width, height);
+addCameraControls(camera);
 startRenderLoop(renderer, scene, camera);
