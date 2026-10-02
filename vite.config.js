@@ -12,8 +12,6 @@ export default defineConfig({
             {
               name: 'three',
               test: /node_modules[\\/]three[\\/]src[\\/]/,
-              minSize: 10000,
-              maxSize: 400000,
               priority: 10,
             },
             {
